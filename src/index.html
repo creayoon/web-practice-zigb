@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="오피스텔, 원룸, 투룸, 대한민국 No.1 전월세 부동산 앱">
+	<meta name="description" content="오피스텔, 원룸, 투룸, 대한민국 No.1 전월세 부동산 앱">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/> 
+	<title>zigbang</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- daum map -->
+	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=d41977b64de4a297dad88a03d50c8a17"></script>
+
+	<!-- naver map -->
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=tNlDQsnZGCJfJEljbwd0&submodules=geocoder"></script>
+
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div id="header">
+		<img src="css/images/back.gif" alt="뒤로가기">
+		<p>서울시 강남구 신사동</p>
+		<img src="css/images/share.gif" alt="공유">
+		<img src="css/images/heart.gif" alt="좋아요">
+	</div>
+	<div id="content">
+		<section class="room">
+			<div class="image-wrapper" ontouchstart="touchStart(event)" ontouchmove="touchMove(event)" ontouchend="touchEnd(event)" onclick="modal()">
+				<a href="javascript:void(0)">
+					<img src="css/images/room1.gif" alt="방 이미지">	
+				</a>
+				<a href="javascript:void(0)">
+					<img src="css/images/room2.gif" alt="방 이미지">	
+				</a>
+				<a href="javascript:void(0)">
+					<img src="css/images/room3.gif" alt="방 이미지">	
+				</a>
+				<a href="javascript:void(0)">
+					<img src="css/images/room4.gif" alt="방 이미지">	
+				</a>
+			</div>
+			<div id="img-modal" onclick="modal()">
+				<a href="javascript:void(0)">
+					<img src="css/images/room1.gif" alt="방 이미지">	
+				</a>
+				<a href="javascript:void(0)">
+					<img src="css/images/room2.gif" alt="방 이미지">	
+				</a>
+				<a href="javascript:void(0)">
+					<img src="css/images/room3.gif" alt="방 이미지">	
+				</a>
+				<a href="javascript:void(0)">
+					<img src="css/images/room4.gif" alt="방 이미지">	
+				</a>
+			</div>
+			<div class="safe-asset">
+				<img src="css/images/safe-asset.gif" alt="안심중개사">
+				
+				<img src="css/images/question.gif" alt="질문">
+			</div>			
+		</section>
+		<section class="section">
+			<table class="section-table">
+				<caption class="caption">신사동 예쁜 쓰리룸</caption>
+				<tbody>
+					<tr>
+						<th class="table-title">보증금</th>
+						<td><span class="table-strong">10000</span> 만원</td>
+					</tr>
+					<tr>
+						<th class="table-title">보증금</th>
+						<td><span class="table-strong">100</span> 만원</td>
+					</tr>
+					<tr>
+						<th>등록번호</th>
+						<td>1234567</td>
+					</tr>
+				</tbody>
+				
+			</table>
+		</section>
+		<section class="section">
+			<p class="section-title">상세설명</p>
+			<div class="section-content">거실과 방이 크게 나온 신사동 3룸 입니다 ^^ <br>남향집이고 해가 너무 잘들고 근처 건물둘에 비해서 집이 깨끗하고 뷰도 좋은 편입니다. <br>가격은 집주인 분과 상의 후에 조정 가능합니다!! <br>깔끔하고 좋은 집 보러 연락주세요!
+			</div>
+		</section>
+		<section class="section">
+			<p class="section-title">담당자 한마디</p>
+			<div class="section-content">공휴일 및 주말에도 언제든지 상담 가능<br>
+			차량 픽업 서비스 가능<br>
+			조건에 맞는 집 답사<br>
+			상담부터 계약까지 고객 맞춤형 서비스
+			</div>
+		</section>
+		<section class="section" id="building">
+			<p class="section-title">건물정보</p>
+			<div class="section-content">
+				<!-- ajax -->
+			</div>
+		</section>
+		<section class="section">
+			<p class="section-title">위치보기</p>
+			<div class="section-content map" id="map"></div>
+			<div class="section-content map-view">
+				<div class="map-detail">
+					<img src="css/images/map-image.gif" alt="지도 이미지">
+					<p>지도보기</p>
+				</div>
+				<div class="map-detail">
+					<img src="css/images/road-view.gif" alt="로드뷰 이미지">
+					<p>로드뷰보기</p>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<p class="section-title">위치보기</p>
+			<div class="section-content">
+				<div>
+					<img src="css/images/person.gif" alt="공인중개사 이미지"/>
+					<img src="css/images/safe-asset.gif" alt="안심중개사">
+				</div>
+				<div class="building-info">
+					<p>대표공인중개사 (이갑영)</p>
+					<p>okok@naver.com</p>	
+					<p>010-1234-5678</p>
+				</div>
+				<div>중개사무소 정보</div>	
+				<div>
+					<p>서울시 마포구, 테리 부동산(김테리)</p>
+					<p>대표번호 : 1588 - 1688</p>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<p class="warning">이 방은 <span>공인중개사가 등록한 중개 매물</span>입니다. <br>
+			공인중개사를 통해 <span>안전하게 계약</span>할 수 있으며, <span>법정 중개 보수가 발생</span>합니다.
+			</p>
+		</section>
+	</div>
+	<div id="footer">
+		<div class="footer-wrapper">
+			<p class="footer-p1">우정공인중개사(김성훈)</p>
+			<p class="footer-p2">중개보조원(한유진팀장)</p>
+			<p class="footer-tel">010-5228-7825</p>
+		</div>
+		<a href="tel:+821063002285" class="footer-tel-img">
+			<img src="css/images/tel.gif" alt="전화"/>
+			<p>문의하기</p>
+		</a>
+	</div>
+
+	<script>
+		var wrapper = document.getElementsByClassName('image-wrapper')[0];
+		var imgModal = document.getElementById('img-modal');
+		var body = document.getElementsByTagName('body');
+		var buildingContent = document.getElementById('building').children[1];
+		var mapContainer = document.getElementById('map'); 
+
+		ajax();
+		// daumMap();
+		naverMap();
+
+		// prototype -----------------
+		// var imgWrapper = document.getElementsByClassName('image-wrapper')[0];
+		
+		// console.log(document.querySelector('image-wrapper'))
+		// window.addEventListener("click", function(e) {
+	 //        // this.setupEvent(event);
+	 //        console.log(e);
+		// });
+
+		// var imageSlider = new ImageSlider(imgWrapper);
+
+		// Slider(imgWrapper);
+		// Modal(imgWrapper);
+
+
+	</script>
+</body>
+</html>
